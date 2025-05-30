@@ -1,0 +1,40 @@
+{
+  "consumer": {
+    "name": "Consumer-ABF"
+  },
+  "interactions": [
+    {
+      "description": "a request for order 1",
+      "providerState": "order with id 1 exists",
+      "request": {
+        "method": "GET",
+        "path": "/order/1"
+      },
+      "response": {
+        "body": {
+          "id": 1,
+          "orderStatus": "Pending"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "15.0.1"
+    },
+    "pactRust": {
+      "ffi": "0.4.22",
+      "models": "1.2.3"
+    },
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  },
+  "provider": {
+    "name": "OrderService"
+  }
+}
